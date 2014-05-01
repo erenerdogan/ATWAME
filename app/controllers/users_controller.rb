@@ -1,9 +1,15 @@
 class UsersController < ApplicationController
+
+  skip_before_filter :verify_authenticity_token, :only => [:login]
+
   def index
     @users = User.all
   end
   
   def login
+
+    p params
+
     @user = User.find_by_email_and_password(params[:email],params[:password])
     if @user
       @message = true
