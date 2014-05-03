@@ -27,6 +27,7 @@ class UsersController < ApplicationController
        @user.name = params[:name]
        @user.email = params[:email]
        @user.password = params[:password]
+       @user.picture = ""
        @user.save
      else
        @message = false

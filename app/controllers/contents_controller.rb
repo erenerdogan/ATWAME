@@ -19,8 +19,28 @@ class ContentsController < ApplicationController
   end
   
   def new
+    @content = Content.new
+    @content.description = params[:description]
+    @content.user_id = params[:user_id]
     
+    @location = Location.new
+    @location.latitude = params[:lat]
+    @location.longitude = params[:lng]
+    @location.save
+    
+    @content.location = @location
+    @content.save
     if @content
+      @message = true;
+    else
+      @message = false;
+    end
+  end
+
+
+  def comments
+    @comments = Content.find(params[:id])
+    if @comments
       @message = true;
     else
       @message = false;
