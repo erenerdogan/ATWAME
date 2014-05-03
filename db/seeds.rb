@@ -7,7 +7,7 @@ Attachment.delete_all
  
 User.create!([
 {id: 1, name: "Eren", email: "erenerdogan87@gmail.com", password:"147852", picture:"", manager: true},
-{id: 2, name: "Süleyman", email: "sbmandal@gmail.com", password:"147852", picture:"", manager: true},
+{id: 2, name: "Suleyman", email: "sbmandal@gmail.com", password:"147852", picture:"", manager: true},
 {id: 3, name: "Gokhan", email: "gokhanbyr@gmail.com", password:"147852", picture:"", manager: false}
 ])
 
