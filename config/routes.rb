@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   match "register" => "users#register", :via => :post , :format => 'json'
      
   
-  match "contents" => "contents#all", :via => :get , :format => 'json'
-  match "find" => "contents#find", :via => :get , :format => 'json'
-  match "new" => "contents#new", :via => :get , :format => 'json'
+  match "contents" => "contents#all", :via => :post , :format => 'json'
+  match "find" => "contents#find", :via => :post , :format => 'json'
+  match "new" => "contents#new", :via => :post , :format => 'json'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
