@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   match "index" => "users#index", :via => :get , :format => 'json'
   match "login" => "users#login", :via => :post , :format => 'json'
-  match "register" => "users#register", :via => :get , :format => 'json'
+  match "register" => "users#register", :via => :post , :format => 'json'
      
   
   match "contents" => "contents#all", :via => :get , :format => 'json'
