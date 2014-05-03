@@ -1,4 +1,7 @@
 class ContentsController < ApplicationController
+  
+  skip_before_filter :verify_authenticity_token
+
   def all
     @contents = Content.all
     if @contents
