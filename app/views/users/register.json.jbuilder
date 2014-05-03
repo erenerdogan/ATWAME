@@ -1,4 +1,4 @@
 json.result @message
 if(@message)
-	json.(@user,:name, :email, :picture)
+	json.(@user,:id, :name, :email, :picture)
 end
