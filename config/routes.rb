@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   match "find" => "contents#find", :via => :post , :format => 'json'
   match "new" => "contents#new", :via => :post , :format => 'json'
   match "reportit" => "contents#reportit", :via => :post , :format => 'json'
+  match "comments" => "contents#comments", :via => :post , :format => 'json'
+  match "commentadd" => "contents#commentadd", :via => :post , :format => 'json'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
