@@ -25,11 +25,13 @@ class ContentsController < ApplicationController
     @content = Content.new
     @content.description = params[:description]
     @content.user_id = params[:user_id]
+    @content.category_id = params[:category_id]
     
     @location = Location.new
     @location.latitude = params[:lat]
     @location.longitude = params[:lng]
     @location.save
+
     
     @content.location = @location
     @content.save

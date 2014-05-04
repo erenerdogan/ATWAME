@@ -1,6 +1,6 @@
 json.result @message
 json.content do
-	json.(content, :id, :description, :user_id, :category_id, :attachment_id, :location_id)
+	json.(content, :id, :description, :user_id, :category_id, :location_id)
 end
 
 json.user do
