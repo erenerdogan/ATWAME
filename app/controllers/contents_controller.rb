@@ -57,10 +57,11 @@ class ContentsController < ApplicationController
 
   def commentadd
     @comment = Comment.new
-    @comment.description = param[:message]
-    @comment.user_id = param[:user_id]
-    @comment.content_id = param[:content_id]
-    if @report
+    @comment.description = params[:message]
+    @comment.user_id = params[:user_id]
+    @comment.content_id = params[:content_id]
+    @comment.save
+    if @comment
       @message = true;
     else
       @message = false;
@@ -69,7 +70,8 @@ class ContentsController < ApplicationController
 
 
   def comments
-    @comments = Content.find(params[:id])
+    @content = Content.find(params[:content_id])
+    @comments = @content.comments
     if @comments
       @message = true;
     else
