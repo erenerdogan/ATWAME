@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315003137) do
+ActiveRecord::Schema.define(version: 20140504135752) do
 
   create_table "attachments", force: true do |t|
     t.text     "url"
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20140315003137) do
   create_table "locations", force: true do |t|
     t.string   "latitude"
     t.string   "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reports", force: true do |t|
+    t.text     "report"
+    t.integer  "user_id"
+    t.integer  "content_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

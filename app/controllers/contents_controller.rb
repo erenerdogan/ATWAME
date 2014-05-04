@@ -42,6 +42,21 @@ class ContentsController < ApplicationController
     end
   end
 
+  def reportit
+    @content = Content.find(params[:content_id])
+    @user = User.find(params[:user_id])
+    @report = Report.new
+    @report.report = params[:message]
+    @report.user =@user
+    @report.content = @content
+    @report.save
+    if @report
+      @message = true;
+    else
+      @message = false;
+    end
+  end
+
 
   def comments
     @comments = Content.find(params[:id])
