@@ -14,7 +14,7 @@ User.create!([
 Category.create!([
 {id: 1, name: "Genel"},
 {id: 2, name: "Duyuru"},
-{id: 3, name: "Eğlence"}
+{id: 3, name: "Eğlence"},
 {id: 4, name: "Haber"},
 {id: 5, name: "Kişisel"},
 {id: 6, name: "Reklam"}
