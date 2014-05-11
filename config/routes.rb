@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  #get 'attachment/create'
+
   #get 'users/index'
   root "users#index"
   
@@ -14,7 +16,8 @@ Rails.application.routes.draw do
   match "comments" => "contents#comments", :via => :post , :format => 'json'
   match "commentadd" => "contents#commentadd", :via => :post , :format => 'json'
   
-
+  match "attachment" => "attachment#create", :via => :post , :format => 'json'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
